@@ -7,3 +7,4 @@ llama-index-readers-file==0.6.0
 chromadb==1.5.9
 pytest==9.1.1
 dotenv==0.9.9
+ragas==0.4.3
