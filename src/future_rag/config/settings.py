@@ -36,13 +36,13 @@ class RAGConfig:
     # --------------------------------------------------
     # Retrieval
     # --------------------------------------------------
-    similarity_top_k: int = 3
+    similarity_top_k: int = 5
 
 
     # --------------------------------------------------
     # LLM
     # --------------------------------------------------
     llm_provider: str = "deepseek"
-    llm_model: str = "deepseek-chat"
-    temperature: float = 0.1
+    llm_model: str = "deepseek-v4-flash"
+    temperature: float = 0.2
     max_tokens: int = 4096

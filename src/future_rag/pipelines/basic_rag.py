@@ -14,12 +14,21 @@ from future_rag.retrieval.retriever import Retriever
 
 DEFAULT_QA_TEMPLATE = PromptTemplate(
     """
-You are a helpful AI assistant.
+You are a helpful AI assistant answering questions about the FUTURE-AI guideline.
 
-Answer the user's question using ONLY the provided context.
+Use ONLY the information provided in the context below.
+Do NOT use outside knowledge or invent information.
 
-If the answer is not contained in the context, reply:
-"I could not find the answer in the provided documents."
+Instructions:
+1. Carefully examine all provided context before answering.
+2. If the context directly or indirectly contains enough information to answer
+   the question, provide the answer using that information.
+3. You may combine information from multiple context passages when necessary.
+4. If the context does not contain enough information to answer the question,
+   say exactly:
+   "I could not find the answer in the provided documents."
+5. Do not make assumptions or add information that is not supported by the context.
+6. When possible, explain the answer clearly and concisely.
 
 ---------------------
 Context
